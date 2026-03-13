@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Configurações Jira</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; width: 350px; background-color: #f4f5f7; }
+    h2 { color: #172b4d; }
+    .field { margin-bottom: 15px; }
+    label { display: block; font-weight: bold; margin-bottom: 5px; color: #42526e; }
+    input { width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #dfe1e6; border-radius: 3px; }
+    button { background: #0052cc; color: white; border: none; padding: 12px; cursor: pointer; width: 100%; border-radius: 3px; font-weight: bold; }
+    button:hover { background: #0065ff; }
+    #status { margin-top: 10px; font-weight: bold; text-align: center; color: #36b37e; }
+  </style>
+</head>
+<body>
+  <h2>Configurações da API</h2>
+  <div class="field">
+    <label>E-mail Atlassian:</label>
+    <input type="email" id="email" placeholder="nome@empresa.com">
+  </div>
+  <div class="field">
+    <label>API Token:</label>
+    <input type="password" id="token" placeholder="Insira o token gerado">
+  </div>
+  <div class="field">
+    <label>Domínio Jira (subdomínio):</label>
+    <input type="text" id="domain" placeholder="ex: minhaempresa">
+  </div>
+  <button id="saveBtn">Salvar Configurações</button>
+  <p id="status"></p>
+  <script src="options.js"></script>
+</body>
+</html>

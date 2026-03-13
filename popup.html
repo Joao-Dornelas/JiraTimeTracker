@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css"> </head>
+<body>
+  <h3>Jira Tracker</h3>
+  
+  <label class="field-label">Tarefa</label>
+  <input type="text" id="issueKey" placeholder="ID da Task (ex: TIS-1234)">
+  
+  <label class="field-label">Início da Atividade <span class="field-tip">(Data | Horas : Min)</span></label>
+  <input type="datetime-local" id="startDate">
+  
+  <label class="field-label">O que foi feito:</label>
+  <textarea id="worklogComment" placeholder="Opcional..."></textarea>
+  
+  <div class="timer-container">
+    <div class="timer-segment">
+      <span class="segment-label">Horas</span>
+      <span id="hours" class="timer-digit">00</span>
+    </div>
+    <div class="timer-separator">:</div>
+    <div class="timer-segment">
+      <span class="segment-label">Min</span>
+      <span id="minutes" class="timer-digit">00</span>
+    </div>
+    <div class="timer-separator">:</div>
+    <div class="timer-segment">
+      <span class="segment-label">Seg</span>
+      <span id="seconds" class="timer-digit">00</span>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="toggleBtn" title="Iniciar/Pausar">▶</button>
+  </div>
+  
+  <button id="sendBtn" class="action-btn">Concluir e Enviar</button>
+  <button id="cancelBtn" class="action-btn">Zerar Cronômetro</button>
+  <div id="status"></div>
+  <hr>
+  <a href="#" id="openOptions">⚙️ Configurações da API</a>
+
+  <div id="customModal" class="modal">
+    <div class="modal-content">
+      <p>Deseja zerar o cronômetro?</p>
+      <div class="modal-buttons">
+        <button id="confirmZerar" class="modal-btn confirm">Sim, Zerar</button>
+        <button id="closeModal" class="modal-btn cancel">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

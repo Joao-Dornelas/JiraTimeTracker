@@ -1,0 +1,211 @@
+body { 
+    width: 300px; 
+    margin: 0;
+    padding: 8px; 
+    font-family: sans-serif; 
+    background-color: #f4f5f7; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #172b4d;
+    text-align: center;
+    font-size: 16px;
+}
+
+.field-label {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    color: #7a869a;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #dfe1e6;
+    border-radius: 3px;
+}
+
+textarea { 
+    width: 100%; 
+    height: 70px;
+    margin-bottom: 6px; 
+    padding: 8px; 
+    box-sizing: border-box;
+    border: 1px solid #dfe1e6; 
+    border-radius: 3px; 
+    font-family: sans-serif;
+    font-size: 13px;
+    resize: none;
+}
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 8px 0;
+    color: #0052cc;
+}
+
+.timer-segment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+}
+
+.segment-label {
+    font-size: 9px;
+    font-weight: bold;
+    color: #7a869a;
+    margin-bottom: 2px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.timer-digit {
+    font-size: 32px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.timer-separator {
+    font-size: 24px;
+    padding-bottom: 4px;
+    font-weight: bold;
+    color: #0052cc;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+#toggleBtn { 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none; 
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+    background: #0052cc; 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#toggleBtn.running {
+    background: #ffab00;
+}
+
+.action-btn {
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 100%;
+    margin-bottom: 6px;
+    color: white;
+    transition: opacity 0.2s;
+}
+
+.action-btn:hover {
+    opacity: 0.9;
+}
+
+#sendBtn {
+    background: #36b37e;
+}
+
+#cancelBtn {
+    background: #de350b;
+}
+
+#status {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+    min-height: 15px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #dfe1e6;
+    margin: 6px 0;
+}
+
+#openOptions {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: #0052cc;
+    text-decoration: none;
+    padding: 2px;
+}
+
+#openOptions:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 30, 66, 0.54); /* Overlay padrão Atlassian */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 15px;
+    border-radius: 3px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.modal-content p {
+    margin-top: 0;
+    font-size: 14px;
+    color: #172b4d;
+    font-weight: 500;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.modal-btn {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.modal-btn.confirm { background: #de350b; color: white; }
+.modal-btn.cancel { background: #dfe1e6; color: #42526e; }
